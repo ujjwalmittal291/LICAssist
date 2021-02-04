@@ -1,12 +1,12 @@
-  <!-- /* Responsive Styles */ -->
-  <!-- @media screen and (max-width: 767px) {
+  <!-- 
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {}
+  @media screen and (max-width: 575px) {} 
+-->
 
-  }
-
-  @media screen and (max-width: 575px) {
-  } -->
-
-
-
-
+  <!-- <app-current-calender></app-current-calender> -->
+  <h3>
+    {{date}}
+  </h3>
+  <button (click)="this.generateTime.generateTime();this.dateservice.generateCalender()"> GetTime </button>
   <router-outlet></router-outlet>

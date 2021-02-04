@@ -1,4 +1,8 @@
+import { getLocaleDateFormat } from '@angular/common';
 import { Component } from '@angular/core';
+import { DateService } from './services/dateService/date.service';
+import { CurrentCalenderComponent } from './components/current-calender/current-calender.component';
+import { GenerateTimeService } from './services/generateTimeService/generate-time.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'LICAssist';
+  date : any; 
+  
+  constructor(
+    private dateservice : DateService,
+    private generateTime : GenerateTimeService) { 
+    
+  }
+  ngOnInit(): void {
+    // this.dateservice.generateCalender();
+    // this.date = this.dateservice.currentDate;
+  }
 }
