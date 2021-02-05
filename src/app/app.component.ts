@@ -13,8 +13,8 @@ export class AppComponent {
   date: any;
 
   constructor(
-    private dateservice: DateService,
-    private generateTime: GenerateTimeService) {
+    public dateservice: DateService,
+    public generateTime: GenerateTimeService) {
 
   }
   ngOnInit(): void {

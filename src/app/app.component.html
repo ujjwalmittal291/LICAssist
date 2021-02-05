@@ -9,4 +9,8 @@
     {{this.dateservice.currentDateName}}
   </h3>
   <button (click)="displayTimeDate()"> GetTime </button>
+  <button routerLink='/userLogin' routerLinkActive="active"> Login </button>
+  <button routerLink='/' routerLinkActive="active"> Home </button>
+  
+  <!-- "routerLinkActive" tag specifies which class to be applied upon clicking on the button -->
   <router-outlet></router-outlet>
