@@ -6,7 +6,7 @@
 
   <!-- <app-current-calender></app-current-calender> -->
   <h3>
-    {{date}}
+    {{this.dateservice.currentDateName}}
   </h3>
-  <button (click)="this.generateTime.generateTime();this.dateservice.generateCalender()"> GetTime </button>
+  <button (click)="displayTimeDate()"> GetTime </button>
   <router-outlet></router-outlet>

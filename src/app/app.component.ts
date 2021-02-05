@@ -10,15 +10,20 @@ import { GenerateTimeService } from './services/generateTimeService/generate-tim
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  date : any; 
-  
+  date: any;
+
   constructor(
-    private dateservice : DateService,
-    private generateTime : GenerateTimeService) { 
-    
+    private dateservice: DateService,
+    private generateTime: GenerateTimeService) {
+
   }
   ngOnInit(): void {
-    // this.dateservice.generateCalender();
-    // this.date = this.dateservice.currentDate;
+    this.dateservice.generateDate();
+  }
+
+  displayTimeDate() {
+    this.generateTime.generateTime();
+    this.dateservice.generateDate();
+    alert("Time : " + this.generateTime.time + "\n" + "Date : " + this.dateservice.currentDate);
   }
 }
