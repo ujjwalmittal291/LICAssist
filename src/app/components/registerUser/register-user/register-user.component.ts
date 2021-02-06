@@ -19,11 +19,13 @@ export class RegisterUserComponent implements OnInit {
     console.log('email : ' + email + '\nPassword : ' + password + '\nFirst Name : ' + firstName + '\nLast Name : ' + lastName);
     try {
       const resp = await this.userAuth.createUserWithEmailAndPassword(email, password);
-      await resp.user.updateProfile({displayName:`${firstName} ${lastName}`});
+      await resp.user.updateProfile({ displayName: `${firstName} ${lastName}` });
       form.reset(); //Reset after completion
     } catch (error) {
       console.log(error.message);
-      
+      if (error.code = 'auth/invalid-email') {
+        alert(error.message);
+      }
     }
   }
 

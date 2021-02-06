@@ -1,0 +1,5 @@
+<div *ngIf="userAuth.user | async as user">
+  <p>Name : {{user.displayName}}</p>
+  <p>User Id : {{user.uid}}</p>
+  <p>Last Login : {{user.metadata.lastSignInTime}}</p>
+</div>

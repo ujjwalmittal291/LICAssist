@@ -1,3 +1,14 @@
-<p>user-login works!</p>
+<form #form="ngForm" (submit)="onSubmit(form)">
+    <div class="field">
+      <label for="email">Email address</label>
+      <input type="email" name="email" placeholder="Email Address" ngModel>
+    </div>
+    <div class="field">
+      <label for="password">Password</label>
+      <input type="password" name="password" ngModel>
+    </div>
+    <button type="submit">Login</button>
+</form>
+<button (click)=logout()>Logout</button>
 
 <button routerLink='/registerUser' routerLinkActive="active"> Register </button>

@@ -14,6 +14,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { CurrentCalenderComponent } from './components/current-calender/current-calender.component';
 import { RegisterUserComponent } from './components/registerUser/register-user/register-user.component';
 import { UserLoginComponent } from './components/userLogin/user-login/user-login.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 // Custom Services
 import { GenerateTimeService } from './services/generateTimeService/generate-time.service';
@@ -24,7 +25,8 @@ import { RegisterUserService } from './services/authenticationServices/register-
     AppComponent,
     CurrentCalenderComponent,
     RegisterUserComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
