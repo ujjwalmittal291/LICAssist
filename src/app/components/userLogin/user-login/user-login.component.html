@@ -1,4 +1,5 @@
-<form #form="ngForm" (submit)="onSubmit(form)">
+<!-- <form #form="ngForm" (submit)="onSubmit(form)"> -->
+<form #form="ngForm" (submit)="this.userAuth.login(form)">
     <div class="field">
       <label for="email">Email address</label>
       <input type="email" name="email" placeholder="Email Address" ngModel>
@@ -9,6 +10,6 @@
     </div>
     <button type="submit">Login</button>
 </form>
-<button (click)=logout()>Logout</button>
+<button (click)=this.userAuth.logout()>Logout</button>
 
 <button routerLink='/registerUser' routerLinkActive="active"> Register </button>

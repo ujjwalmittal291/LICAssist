@@ -1,6 +1,6 @@
 <p>register-user works!</p>
 
-<form #form="ngForm" (submit)="onSubmit(form)">
+<form #form="ngForm" (submit)="this.userAuth.registerUser(form)">
   <div class="field">
     <div class="twoFields">
       <label for="firstName">First Name</label>

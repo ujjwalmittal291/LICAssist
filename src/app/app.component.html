@@ -11,6 +11,13 @@
   <!-- <button (click)="displayTimeDate()"> GetTime </button> -->
   <button routerLink='/userLogin' routerLinkActive="active"> Login </button>
   <button routerLink='/' routerLinkActive="active"> Home </button>
-  
+  <br>
+  <form #form="ngForm">
+    <input type="text" name="a" (keyup.enter)="this.en(form)" autofocus ngModel>
+  </form>
+  <br>
+  <br>
+  <p>{{this.data}}</p>
+
   <!-- "routerLinkActive" tag specifies which class to be applied upon clicking on the button -->
   <router-outlet></router-outlet>

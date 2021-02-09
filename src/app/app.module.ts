@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 // Firebase Modules
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore/';
 
 
 // Custom Components
@@ -19,26 +20,31 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 // Custom Services
 import { GenerateTimeService } from './services/generateTimeService/generate-time.service';
 import { DateService } from './services/dateService/date.service';
-import { RegisterUserService } from './services/authenticationServices/register-user.service';
+import { UserAuthService } from './services/authenticationServices/userAuth.service';
+import { PolicymasterComponent } from './components/policymaster/policymaster.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     CurrentCalenderComponent,
     RegisterUserComponent,
     UserLoginComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    PolicymasterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule
+    AngularFireModule.initializeApp(environment.firebaseConfig), 
+    //Initializes firebase connection with the config data present in environment file.
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   providers: [
     GenerateTimeService,
     DateService,
-    RegisterUserService
+    UserAuthService
   ],
   bootstrap: [AppComponent]
 })

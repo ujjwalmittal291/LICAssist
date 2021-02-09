@@ -1,0 +1,89 @@
+<!-- Insert Policy Data -->
+
+<!-- export interface policyDetails{
+    policyNumber: number,
+    proposerName:string,
+    sumInsured: number,
+    premium:number,
+    termTable:string,
+    nominee: string,
+    doc: string,
+    dom: string,
+    mode: string,
+    status:string,
+    moneyBack: boolean
+} -->
+
+<div class="policyDetail">
+  <form #form="ngForm" class="policyMaster" (submit)="this.fsService.insertPolicyDetails(form.value)">
+    <!-- Policy number -->
+    <div class="mb-1">
+      <label for="policyNumber" class="form-label">Policy number</label>
+      <input type="number" class="form-control" id="policyNumber" name="policyNumber" autofocus ngModel>
+    </div>
+    <!-- Proposer Name -->
+    <div class="mb-1">
+      <label for="proposerName" class="form-label">Proposer Name</label>
+      <input type="text" class="form-control" id="proposerName" name="proposerName" ngModel>
+    </div>
+    <!-- Sum insured -->
+    <div class="mb-1">
+      <label for="sumInsured" class="form-label">Sum Insured</label>
+      <input type="number" class="form-control" id="sumInsured" name="sumInsured" ngModel>
+    </div>
+    <!-- Premium -->
+    <div class="mb-1">
+      <label for="premium" class="form-label">Premium</label>
+      <input type="number" class="form-control" id="premium" name="premium" ngModel>
+    </div>
+    <!-- Term -->
+    <div class="mb-1">
+      <label for="termTable" class="form-label">Term Table</label>
+      <input type="text" class="form-control" id="termTable" name="termTable" ngModel>
+    </div>
+    <!-- nominee -->
+    <div class="mb-1">
+      <label for="nominee" class="form-label">Nominee</label>
+      <input type="text" class="form-control" id="nominee" name="nominee" ngModel>
+    </div>
+    <!-- Date of Commencement -->
+    <div class="mb-1">
+      <label for="dateofCommencement" class="form-label">Date of Commencement</label>
+      <input type="date" class="form-control" id="dateofCommencement" name="dateofCommencement" ngModel>
+    </div>
+    <!-- Date of Maturity -->
+    <div class="mb-1">
+      <label for="dateofMaturity" class="form-label">Date of Maturity</label>
+      <input type="date" class="form-control" id="dateofMaturity" name="dateofMaturity" ngModel>
+    </div>
+    <!-- Mode -->
+    <label for="mode" class="form-label">Mode</label>
+    <select class="form-select form-select-sm mb-1" aria-label=".form-select-sm example" name='mode' ngModel>
+      <option selected>Open this select menu</option>
+      <option value="Monthly">Monthly</option>
+      <option value="Quaterly">Quaterly</option>
+      <option value="Half Yearly">Half Yearly</option>
+      <option value="Yearly">Yearly</option>
+      <option value="ECS/Nach">ECS/Nach</option>
+    </select>
+
+    <!-- Status -->
+    <label for="status" class="form-label">Status</label>
+    <select class="form-select form-select-sm mb-1" aria-label=".form-select-sm example" placeholder='Status'
+      name='status' ngModel>
+      <option selected>Open this select menu</option>
+      <option value="Active">Active</option>
+      <option value="Inactive">Inactive</option>
+    </select>
+
+    <!-- MoneyBack -->
+    <div class="form-check mb-1">
+      <input class="form-check-input" type="checkbox" name="moneyBack" id="moneyBack" value="true" ngModel>
+      <label class="form-check-label" for="moneyBack">Money Back</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+  </form>
+
+</div>

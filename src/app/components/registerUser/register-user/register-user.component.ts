@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { NgForm } from '@angular/forms';
+import { UserAuthService } from 'src/app/services/authenticationServices/userAuth.service';
 
 @Component({
   selector: 'app-register-user',
@@ -9,24 +10,25 @@ import { NgForm } from '@angular/forms';
 })
 export class RegisterUserComponent implements OnInit {
 
-  constructor(private userAuth: AngularFireAuth) { }
+  constructor(public userAuth: UserAuthService) { }
 
   ngOnInit(): void {
   }
 
-  async onSubmit(form: NgForm) {
-    const { email, password, firstName, lastName } = form.value;
-    console.log('email : ' + email + '\nPassword : ' + password + '\nFirst Name : ' + firstName + '\nLast Name : ' + lastName);
-    try {
-      const resp = await this.userAuth.createUserWithEmailAndPassword(email, password);
-      await resp.user.updateProfile({ displayName: `${firstName} ${lastName}` });
-      form.reset(); //Reset after completion
-    } catch (error) {
-      console.log(error.message);
-      if (error.code = 'auth/invalid-email') {
-        alert(error.message);
-      }
-    }
-  }
+  // This method is migrated authentication Services 
+  // async onSubmit(form: NgForm) {
+  //   const { email, password, firstName, lastName } = form.value;
+  //   console.log('email : ' + email + '\nPassword : ' + password + '\nFirst Name : ' + firstName + '\nLast Name : ' + lastName);
+  //   try {
+  //     const resp = await this.userAuth.createUserWithEmailAndPassword(email, password);
+  //     await resp.user.updateProfile({ displayName: `${firstName} ${lastName}` });
+  //     form.reset(); //Reset after completion
+  //   } catch (error) {
+  //     console.log(error.message);
+  //     if (error.code = 'auth/invalid-email') {
+  //       alert(error.message);
+  //     }
+  //   }
+  // }
 
 }

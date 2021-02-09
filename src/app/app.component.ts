@@ -11,7 +11,8 @@ import { GenerateTimeService } from './services/generateTimeService/generate-tim
 })
 export class AppComponent {
   date: any;
-
+  // a: string;
+  data='';
   constructor(
     public dateservice: DateService,
     public generateTime: GenerateTimeService) {
@@ -25,5 +26,14 @@ export class AppComponent {
     this.generateTime.generateTime();
     this.dateservice.generateDate();
     alert("Time : " + this.generateTime.time + "\n" + "Date : " + this.dateservice.currentDate);
+  }
+
+
+  // To concat string and clear input
+  en(d) {
+    console.log(d.value.a);
+    this.data = this.data + d.value.a;
+    console.log(this.data);
+    d.value.a=null;
   }
 }
