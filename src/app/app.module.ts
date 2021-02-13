@@ -22,6 +22,10 @@ import { GenerateTimeService } from './services/generateTimeService/generate-tim
 import { DateService } from './services/dateService/date.service';
 import { UserAuthService } from './services/authenticationServices/userAuth.service';
 import { PolicymasterComponent } from './components/policymaster/policymaster.component';
+import { MonthlystatusComponent } from './components/monthlystatus/monthlystatus.component';
+import { AddmenuComponent } from './components/addmenu/addmenu.component';
+import { MenubarComponent } from './components/menubar/menubar.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { PolicymasterComponent } from './components/policymaster/policymaster.co
     RegisterUserComponent,
     UserLoginComponent,
     UserProfileComponent,
-    PolicymasterComponent
+    PolicymasterComponent,
+    MonthlystatusComponent,
+    AddmenuComponent,
+    MenubarComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

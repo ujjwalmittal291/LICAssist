@@ -1,0 +1,21 @@
+.menuBar {
+  height: 2em;
+  width: 100%;
+  background-color: rgba(122, 122, 122, 0.667) !important;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  padding: 0;
+}
+
+.add {
+  /* width: 2em; */
+  height: 2rem;
+  position: absolute;
+  right: 1%;
+  /* border: 0; */
+  /* padding: 0.5em; */
+}
+
+.home {
+  height: 2rem;
+}

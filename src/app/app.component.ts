@@ -1,8 +1,4 @@
-import { getLocaleDateFormat } from '@angular/common';
 import { Component } from '@angular/core';
-import { DateService } from './services/dateService/date.service';
-import { CurrentCalenderComponent } from './components/current-calender/current-calender.component';
-import { GenerateTimeService } from './services/generateTimeService/generate-time.service';
 
 @Component({
   selector: 'app-root',
@@ -10,30 +6,9 @@ import { GenerateTimeService } from './services/generateTimeService/generate-tim
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  date: any;
-  // a: string;
-  data='';
   constructor(
-    public dateservice: DateService,
-    public generateTime: GenerateTimeService) {
-
+) {
   }
   ngOnInit(): void {
-    this.dateservice.generateDate();
-  }
-
-  displayTimeDate() {
-    this.generateTime.generateTime();
-    this.dateservice.generateDate();
-    alert("Time : " + this.generateTime.time + "\n" + "Date : " + this.dateservice.currentDate);
-  }
-
-
-  // To concat string and clear input
-  en(d) {
-    console.log(d.value.a);
-    this.data = this.data + d.value.a;
-    console.log(this.data);
-    d.value.a=null;
   }
 }
