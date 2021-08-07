@@ -1,4 +1,5 @@
-<app-menubar [addButton]='true'></app-menubar>
+<app-menubar componentName ="Dashboard"></app-menubar>
+
 
 <!-- <button routerLink='/userLogin' routerLinkActive="active"> Login </button> -->
 <!-- <button routerLink='/' routerLinkActive="active"> Home </button> -->
@@ -8,6 +9,8 @@
     <input type="text" name="a" (keyup.enter)="this.en(form)" autofocus ngModel>
   </form>
   <p *ngFor="let fruit of list">{{fruit}}</p> -->
+
+<!-- <p>{{this.constructor.name}}</p> -->
 
 <div class="monthlyStatus">
   <!-- Space for component displaying monthly Data

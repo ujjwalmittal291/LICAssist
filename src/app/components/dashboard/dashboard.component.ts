@@ -22,6 +22,8 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.dateservice.generateDate();
+    // console.log("Component name is : " + this.constructor.name);
+
   }
 
   displayTimeDate() {

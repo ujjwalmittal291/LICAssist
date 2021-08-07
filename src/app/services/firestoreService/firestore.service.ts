@@ -15,7 +15,6 @@ export class FirestoreService {
       email: response.email,
       uid: response.uid
     }
-
     // Write to cloud store
     return this.firestoreServices.doc(`users/${userProfile.uid}`).set(userProfile);
   }

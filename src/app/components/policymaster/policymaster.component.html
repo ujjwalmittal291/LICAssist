@@ -1,18 +1,5 @@
 <!-- Insert Policy Data -->
 
-<!-- export interface policyDetails{
-    policyNumber: number,
-    proposerName:string,
-    sumInsured: number,
-    premium:number,
-    termTable:string,
-    nominee: string,
-    doc: string,
-    dom: string,
-    mode: string,
-    status:string,
-    moneyBack: boolean
-} -->
 
 <div class="policyDetail">
   <form #form="ngForm" class="policyMaster" (submit)="this.fsService.insertPolicyDetails(form.value)">

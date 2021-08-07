@@ -26,6 +26,7 @@ import { MonthlystatusComponent } from './components/monthlystatus/monthlystatus
 import { AddmenuComponent } from './components/addmenu/addmenu.component';
 import { MenubarComponent } from './components/menubar/menubar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SearchqueryComponent } from './components/searchquery/searchquery.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     MonthlystatusComponent,
     AddmenuComponent,
     MenubarComponent,
-    DashboardComponent
+    DashboardComponent,
+    SearchqueryComponent
   ],
   imports: [
     BrowserModule,

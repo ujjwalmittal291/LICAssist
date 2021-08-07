@@ -7,12 +7,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MenubarComponent implements OnInit {
 
-  @Input()
-  addButton: boolean;
+  @Input() addButton: boolean;
+  @Input() componentName: string;
   constructor() {
     this.addButton = true;
   }
   ngOnInit(): void {
+    console.log("Component name : "+this.componentName);
+    
   }
 
 }

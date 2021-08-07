@@ -8,12 +8,27 @@
 }
 
 .add {
-  /* width: 2em; */
+  width: 2em;
   height: 2rem;
   position: absolute;
-  right: 1%;
+  right: 0;
   /* border: 0; */
   /* padding: 0.5em; */
+}
+
+.search {
+  /* width: 2em; */
+  /* size: 0.9rem; */
+  /* font-size: 0.5rem !important; */
+  height: 2rem;
+  position: absolute;
+  right: 2rem;
+  /* border: 0; */
+  /* padding: 0.5em; */
+}
+
+.search i {
+  font-size: 0.9rem;
 }
 
 .home {
